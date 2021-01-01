@@ -11,7 +11,7 @@ export class BreweryComponent implements OnInit {
   brewery: Brewery = {
     name: 'no geeks brewing',
     location: 'hoboken, nj',
-    established: 'established 2018'
+    established: 'est 2018'
   };
 
   constructor() { }
