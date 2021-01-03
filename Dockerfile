@@ -14,4 +14,4 @@ FROM nginx:1.15.8-alpine
 
 COPY --from=builder /usr/src/app/dist/no-geeks-brewing/ /usr/share/nginx/html
 
-COPY nginx.conf /etc/nginx/nginx.conf
+#COPY nginx.conf /etc/nginx/nginx.conf
