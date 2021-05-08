@@ -9,7 +9,7 @@ import { Brewery } from '../brewery';
 export class BreweryComponent implements OnInit {
 
   brewery: Brewery = {
-    name: 'no geeks brewing+',
+    name: 'no geeks brewing',
     location: 'hoboken, nj',
     established: 'est 2018'
   };
