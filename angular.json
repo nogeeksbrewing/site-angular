@@ -127,7 +127,6 @@
       }
     }
   },
-  "defaultProject": "no-geeks-brewing",
   "cli": {
     "analytics": false
   }
