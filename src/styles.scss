@@ -2,20 +2,24 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300');
 
-html, body
+html, body {
     height: 100%;
     margin: 0;
+}
 
-body
+body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: #F5F5F5;
+}
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     text-transform: uppercase;
+}
 
-a:link, a:visited, a:hover, a:active
+a:link, a:visited, a:hover, a:active {
 	color: #F5F5F5;
 	text-decoration: none;
+}

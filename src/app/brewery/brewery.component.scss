@@ -12,7 +12,7 @@ main {
 section {
   height: 100%; /* takes the visible area of the "main" div */
   overflow: auto; /* recommended */
-  background: #585858
+  background: #585858;
 }
 
 header {
@@ -21,7 +21,7 @@ header {
 }
 
 footer {
-	color: #F5F5F5
+	color: #F5F5F5;
 	background: #383838;
 }
 
@@ -33,19 +33,19 @@ footer {
 	align-items: stretch;
 }
 
-#brewery-bottom-left {\
-	width: 25%
+#brewery-bottom-left {
+	width: 25%;
 	text-align: left;
 	margin-left: 16px;
 }
 
 #brewery-bottom-middle {
-	width: 50%
+	width: 50%;
 	text-align: center;
 }
 
 #brewery-bottom-right {
-	width: 25%
+	width: 25%;
 	text-align: right;
 	margin-right: 16px;
 }
