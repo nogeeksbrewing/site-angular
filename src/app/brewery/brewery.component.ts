@@ -9,8 +9,8 @@ import { Brewery } from '../brewery';
 export class BreweryComponent implements OnInit {
 
   brewery: Brewery = {
-    name: 'no geeks brewing',
-    location: 'hoboken, nj',
+    name: 'No Geeks Brewing',
+    location: 'Hoboken, NJ',
     established: 'since 2018'
   };
 
