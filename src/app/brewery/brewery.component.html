@@ -5,7 +5,15 @@
         </h1>
     </header>
     <main>
-      <section></section>
+      <section>
+        <app-batches [header]="brewery.futureBatches"></app-batches>
+      </section>
+      <section>
+        <app-batches [header]="brewery.presentBatches"></app-batches>
+      </section>
+      <section>
+        <app-batches [header]="brewery.pastBatches"></app-batches>
+      </section>
     </main>
     <footer>
         <div id="brewery-footer-wrapper">

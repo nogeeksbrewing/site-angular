@@ -12,7 +12,10 @@ export class BreweryComponent implements OnInit {
     name: 'No Geeks Brewing',
     location: 'Hoboken, NJ',
     established: 'since 2018',
-    email: 'allan@nogeeksbrewing.com'
+    email: 'allan@nogeeksbrewing.com',
+    pastBatches: 'Archives',
+    presentBatches: 'Now Pouring',
+    futureBatches: 'Coming Soon'
   };
 
   constructor() { }

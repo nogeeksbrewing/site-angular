@@ -5,14 +5,14 @@
 }
 
 main {
+	height: 100%;
   flex: 1; /* takes the remaining height of the "container" div */
   overflow: auto; /* to scroll just the "main" div */
+  background: #585858;
 }
 
 section {
-  height: 100%; /* takes the visible area of the "main" div */
   overflow: auto; /* recommended */
-  background: #585858;
 }
 
 header {
