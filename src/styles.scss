@@ -1,6 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300');
+@use '@angular/material' as mat;
+
+$my-custom-typography: mat.define-typography-config(
+  $font-family: 'Lato'
+);
+
+@include mat.core($my-custom-typography);
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:300');
 
 html, body {
     height: 100%;
