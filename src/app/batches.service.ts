@@ -16,11 +16,11 @@ export class BatchesService {
   }
 
   completed(): Observable<Batch []> {
-    return of(BATCHES);
+    return of([]);
   }
 
   archived(): Observable<Batch []> {
-    return of(BATCHES);
+    return of([]);
   }
 
 }

@@ -7,13 +7,19 @@ import { Batch } from '../objects';
   selector: 'app-batches-list',
   template: `
   <div *ngIf="(planned | async) as batches">
-    <app-batches [header]="'Coming Soon'" [batches]="batches"></app-batches>
+    <div *ngIf="batches.length">
+      <app-batches [header]="'Coming Soon'" [batches]="batches"></app-batches>
+    </div>
   </div>
   <div *ngIf="(completed | async) as batches">
-    <app-batches [header]="'Now Pouring'" [batches]="batches"></app-batches>
+    <div *ngIf="batches.length">
+      <app-batches [header]="'Now Pouring'" [batches]="batches"></app-batches>
+    </div>
   </div>
   <div *ngIf="(archived | async) as batches">
-    <app-batches [header]="'Archives'" [batches]="batches"></app-batches>
+    <div *ngIf="batches.length">
+      <app-batches [header]="'Archives'" [batches]="batches"></app-batches>
+    </div>
   </div>
   `,
   styles: [`
