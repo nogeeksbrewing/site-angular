@@ -1,4 +1,4 @@
-<div id="brewery-container">
+<div *ngIf="(brewery | async) as brewery" id="brewery-container">
     <header>
         <h1>
             {{brewery.name}}
@@ -27,10 +27,10 @@
                 <h5>{{brewery.location}}</h5>
             </div>
             <div id="brewery-bottom-middle">
-                <h5><a href="mailto:{{brewery.email}}">{{brewery.email}}</a></h5>
+                <h5><a href="mailto:{{brewery.contact}}">{{brewery.contact}}</a></h5>
             </div>
             <div id="brewery-bottom-right">
-                <h5>{{brewery.established}}</h5>
+                <h5>{{brewery.info}}</h5>
             </div>
         </div>
     </footer>
