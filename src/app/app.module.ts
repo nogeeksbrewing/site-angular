@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { BreweryComponent } from './brewery/brewery.component';
 import { BatchesComponent } from './batches/batches.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BatchesListComponent } from './batches-list/batches-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BreweryComponent,
-    BatchesComponent
+    BatchesComponent,
+    BatchesListComponent
   ],
   imports: [
     BrowserModule,

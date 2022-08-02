@@ -3,10 +3,6 @@ export interface Brewery {
     location: string;
     info: string;
     contact: string;
-    // TODO - Move these
-    futureBatches: string;
-    presentBatches: string;
-    pastBatches: string;
 }
 
 export const BREWERY: Brewery = {
@@ -14,9 +10,6 @@ export const BREWERY: Brewery = {
     location: 'Hoboken, NJ',
     info: 'since 2018',
     contact: 'allan@nogeeksbrewing.com',
-    pastBatches: 'Archives',
-    presentBatches: 'Now Pouring',
-    futureBatches: 'Coming Soon'
 };
 
 export interface Batch {
