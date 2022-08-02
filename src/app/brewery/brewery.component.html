@@ -6,13 +6,19 @@
     </header>
     <main>
       <section>
-        <app-batches [header]="brewery.futureBatches"></app-batches>
+        <div *ngIf="(planned | async) as batches">
+          <app-batches [header]="brewery.futureBatches" [batches]="batches"></app-batches>
+        </div>
       </section>
       <section>
-        <app-batches [header]="brewery.presentBatches"></app-batches>
+        <div *ngIf="(completed | async) as batches">
+          <app-batches [header]="brewery.presentBatches" [batches]="batches"></app-batches>
+        </div>
       </section>
       <section>
-        <app-batches [header]="brewery.pastBatches"></app-batches>
+        <div *ngIf="(archived | async) as batches">
+          <app-batches [header]="brewery.pastBatches" [batches]="batches"></app-batches>
+        </div>
       </section>
     </main>
     <footer>

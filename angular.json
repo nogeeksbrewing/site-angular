@@ -51,6 +51,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "inlineStyleLanguage":"scss",
               "budgets": [
                 {
                   "type": "initial",

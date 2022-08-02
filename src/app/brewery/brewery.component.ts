@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { BatchesService } from '../batches.service';
 import { Brewery } from '../brewery';
+import { Batch } from '../objects';
 
 @Component({
   selector: 'app-brewery',
@@ -18,9 +21,18 @@ export class BreweryComponent implements OnInit {
     futureBatches: 'Coming Soon'
   };
 
-  constructor() { }
+  planned: Observable<Batch[]>;
+  completed: Observable<Batch[]>;
+  archived: Observable<Batch[]>;
+
+  constructor(private batchesService: BatchesService) {
+    this.planned = batchesService.planned();
+    this.completed = batchesService.completed(); 
+    this.archived = batchesService.archived();
+  }
 
   ngOnInit(): void {
+
   }
 
 }

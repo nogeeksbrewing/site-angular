@@ -3,12 +3,13 @@
 @use '@angular/material' as mat;
 
 $my-custom-typography: mat.define-typography-config(
-  $font-family: 'Lato'
+   $font-family: 'Work Sans'
 );
 
 @include mat.core($my-custom-typography);
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:300');
+// <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,700|Montserrat:300');
 
 html, body {
     height: 100%;
@@ -16,7 +17,7 @@ html, body {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     color: #F5F5F5;
 }
