@@ -8,7 +8,6 @@ $my-custom-typography: mat.define-typography-config(
 
 @include mat.core($my-custom-typography);
 
-// <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,700|Montserrat:300');
 
 html, body {
@@ -19,7 +18,7 @@ html, body {
 body {
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    color: #F5F5F5;
+    // color: #F5F5F5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,6 +28,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a:link, a:visited, a:hover, a:active {
-	color: #F5F5F5;
+	// color: #F5F5F5;
 	text-decoration: none;
 }

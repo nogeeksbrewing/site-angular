@@ -19,6 +19,8 @@ export interface Batch {
     status: string;
     brewer: string;
     date: number;
+    style: string;
+    category: string;
 
     recipe: Recipe;
 }
@@ -36,6 +38,8 @@ export const PLANNING: Batch[] = [
         'status': 'Planning',
         'brewer': 'Allan Lewis',
         'date': 1660363200000,
+        'style': 'Double IPA',
+        'category': '22A',
         'recipe': {
             'name': 'Wiggle & Grunt',
             'tags': ['ngb']
@@ -51,6 +55,8 @@ export const COMPLETED: Batch[] = [
         "status":"Completed",
         "brewer": 'Allan Lewis',
         "date":1656216000000,
+        'style': 'Gose',
+        'category': '27A',
         "recipe":{"name":"Tickle", tags: []}
     }, {
         "id":"JHVFUba6Wy47h1vlp5dTPIukJ4GRNK",
@@ -59,6 +65,8 @@ export const COMPLETED: Batch[] = [
         "status":"Completed",
         "brewer":"Allan Lewis",
         "date":1651377600000,
+        'style': 'English Barleywine',
+        'category': '17D',
         "recipe":{"name":"Boleyn", tags: []}
     }, {
         "id":"OhzFLQBzNr3KrgISTtKoGR5rSN1pMO",
@@ -67,6 +75,8 @@ export const COMPLETED: Batch[] = [
         "status":"Completed",
         "brewer":"Allan Lewis",
         "date":1646456400000,
+        'style': 'Oud Bruin',
+        'category': '23C',
         "recipe":{"name":"Neely", tags: []}
     }
 ];

@@ -33,7 +33,7 @@ import { Brewery } from '../objects';
       height: 100%;
       flex: 1; /* takes the remaining height of the "container" div */
       overflow: auto; /* to scroll just the "main" div */
-      background: #585858;
+      //background: #585858;
     }
     
     section {
@@ -41,13 +41,13 @@ import { Brewery } from '../objects';
     }
     
     header {
-      background: #383838;
+      //background: #383838;
       text-align: center;
     }
     
     footer {
-      color: #F5F5F5;
-      background: #383838;
+      //color: #F5F5F5;
+      //background: #383838;
     }
     
     #brewery-footer-wrapper {

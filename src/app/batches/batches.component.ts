@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { Batch } from '../objects';
 
+import * as moment from 'moment';
+
 @Component({
   selector: 'app-batches',
   styles: [`
@@ -34,8 +36,11 @@ import { Batch } from '../objects';
     </div>
     <div class="batches-cards">
         <mat-card *ngFor='let batch of batches' class="batch-card">
-            <mat-card-title>#{{batch.number}}: {{batch.name}}</mat-card-title>
-            <mat-card-subtitle></mat-card-subtitle>
+            <mat-card-title>{{batch.name}}</mat-card-title>
+            <mat-card-subtitle>{{batch.category}}: {{batch.style}}</mat-card-subtitle>
+            <mat-card-content>
+              <p>Batch #{{batch.number}}: {{format(batch.date)}}</p>
+            </mat-card-content>
             <mat-card-actions>
               <button mat-button>BATCH</button>
               <button mat-button>RECIPE</button>
@@ -55,6 +60,10 @@ export class BatchesComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  format(input: number): string {
+    return moment(input).format('MMMM Do, yyyy');
   }
 
 }
