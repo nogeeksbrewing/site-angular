@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 import { Batch } from './objects';
-import { BATCHES } from './objects';
+import { PLANNING, COMPLETED } from './objects';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,11 @@ export class BatchesService {
   constructor() { }
 
   planned(): Observable<Batch []> {
-    return of(BATCHES);
+    return of(PLANNING);
   }
 
   completed(): Observable<Batch []> {
-    return of([]);
+    return of(COMPLETED);
   }
 
   archived(): Observable<Batch []> {

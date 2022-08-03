@@ -6,7 +6,6 @@ import { Batch } from '../objects';
   selector: 'app-batches',
   styles: [`
   .batch-card {
-    background-color:pink;
     width: 400px;
     margin: 4px;
   }
@@ -35,8 +34,12 @@ import { Batch } from '../objects';
     </div>
     <div class="batches-cards">
         <mat-card *ngFor='let batch of batches' class="batch-card">
-            <mat-card-title>{{batch.name}}</mat-card-title>
-            <mat-card-subtitle>{{batch.number}}</mat-card-subtitle>
+            <mat-card-title>#{{batch.number}}: {{batch.name}}</mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+            <mat-card-actions>
+              <button mat-button>BATCH</button>
+              <button mat-button>RECIPE</button>
+          </mat-card-actions>
         </mat-card>
     </div>
   </div>

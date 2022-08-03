@@ -41,10 +41,4 @@ export class BatchesListComponent implements OnInit {
 
   }
 
-  /*
-    pastBatches: 'Archives',
-    presentBatches: 'Now Pouring',
-    futureBatches: 'Coming Soon'
-  */
-
 }
