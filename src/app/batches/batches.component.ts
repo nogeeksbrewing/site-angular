@@ -13,20 +13,27 @@ import * as moment from 'moment';
   }
 
   .batches-wrapper {
-    background-color: yellow;
+    /* background-color: yellow; */
   }
 
   .batches-header {
-    background-color: teal;
+    margin-left: 8px;
+    /* background-color: teal; */
   }
 
   .batches-cards {
-    background-color: limegreen;
+    /* background-color: limegreen; */
     padding: 4px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-around;
+  }
+
+  mat-icon.mat-card-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
   }
   `],
   template: `
@@ -36,8 +43,11 @@ import * as moment from 'moment';
     </div>
     <div class="batches-cards">
         <mat-card *ngFor='let batch of batches' class="batch-card">
+          <mat-card-header> 
+            <mat-icon mat-card-avatar>sports_bar</mat-icon>
             <mat-card-title>{{batch.name}}</mat-card-title>
             <mat-card-subtitle>{{batch.category}}: {{batch.style}}</mat-card-subtitle>
+            </mat-card-header>
             <mat-card-content>
               <p>Batch #{{batch.number}}: {{format(batch.date)}}</p>
             </mat-card-content>

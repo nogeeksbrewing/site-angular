@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { MatCardModule } from '@angular/material/card'
 import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { BatchesListComponent } from './batches-list/batches-list.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
