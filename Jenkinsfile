@@ -1,56 +1,33 @@
-podTemplate(yaml: """
-apiVersion: v1
+pipeline {
+  agent {
+    kubernetes {
+      //cloud 'kubernetes'
+      yaml """
 kind: Pod
+metadata:
+  name: kaniko
 spec:
   containers:
-  - name: docker
-    image: docker:1.11
-    command: ['cat']
-    tty: true
-    volumeMounts:
-    - name: dockersock
-      mountPath: /var/run/docker.sock
-  volumes:
-  - name: dockersock
-    hostPath:
-      path: /var/run/docker.sock
+    - name: kaniko
+      image: gcr.io/kaniko-project/executor:v1.9.1-debug
+      imagePullPolicy: Always
+      command:
+      - sleep
+      args:
+      - 99d
 """
-  ) {
-
-node {
-    def app
-
-    stage('Clone repository') {
-        /* Let's make sure we have the repository cloned to our workspace */
-
-        checkout scm
     }
-
-    stage('Build image') {
-        /* This builds the actual image; synonymous to
-         * docker build on the command line */
-	container('docker') {
-            app = docker.build("nogeeksbrewing/site")
+  }
+  stages {
+    stage('Build with Kaniko') {
+      steps {
+        git branch: 'main', url: 'https://github.com/nogeeksbrewing/site-angular'
+        container(name: 'kaniko') {
+            sh '''
+            /kaniko/executor --dockerfile `pwd`/Dockerfile --context `pwd` --no-push
+            '''
         }
+      }
     }
-
-    // stage('Test image') {
-    //     /* Ideally, we would run a test framework against our image.
-    //      * For this example, we're using a Volkswagen-type approach ;-) */
-
-    //     app.inside {
-    //         sh 'echo "Tests passed"'
-    //     }
-    // }
-
-    // stage('Push image') {
-    //     /* Finally, we'll push the image with two tags:
-    //      * First, the incremental build number from Jenkins
-    //      * Second, the 'latest' tag.
-    //      * Pushing multiple tags is cheap, as all the layers are reused. */
-    //     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-    //         app.push("${env.BUILD_NUMBER}")
-    //         app.push("latest")
-    //     }
-    // }
-} }
+  }
+}
