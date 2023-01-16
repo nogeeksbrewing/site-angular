@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
     - name: kaniko
-      image: gcr.io/kaniko-project/executor:latest
+      image: gcr.io/kaniko-project/executor:v1.9.1-debug
       imagePullPolicy: Always
       command:
       - sleep
