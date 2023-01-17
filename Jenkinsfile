@@ -15,6 +15,16 @@ spec:
       - sleep
       args:
       - 99d
+  volumeMounts:
+    - name: kaniko-secret
+      mountPath: /kaniko/.docker
+  volumes:
+    - name: kaniko-secret
+      secret:
+        secretName: dockercred
+        items:
+          - key: .dockerconfigjson
+            path: config.json
 """
     }
   }
